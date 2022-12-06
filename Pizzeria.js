@@ -9,18 +9,19 @@ console.log(pizza);
 
 function pizzaOven(tipoCorteza,tipoSalsa,quesos,salsas) {
     let pizza = {}
-    pizza.tipoCorteza=tipoCorteza;
-    pizza.tipoSalsa=tipoSalsa;
-    pizza.quesos=quesos;
-    pizza.salsas=salsas;
+    pizza.tipoCorteza = tipoCorteza;
+    pizza.tipoSalsa = tipoSalsa;
+    pizza.quesos = quesos;
+    pizza.salsas = salsas;
 
     return pizza
 }
 
-let pizza1 = pizzaOven ("corteza delgada", "salsa de tomate",["mozzarella"],["pepperoni", "salchichas"])
-let pizza2 = pizzaOven ("borde de queso", "salsa BBQ", ["pepperoni" "carne"], ["champiñones, choclo"])
-let pizza3 = pizzaOven ("masa pan", "ketchup", ["parmesano", "chedar"], ["choricillo", "tocino"], ["piña, tomate"]) 
-let pizza4 = pizzaOven ("corteza delgada", "salsa de tomate", ["extra queso", "chedar", "jamon"], ["tomate","pimineto verde","cebolla"])
+let pizza1 = pizzaOven("corteza delgada","salsa tradicional",["mozzarella"],["pepperoni","salchicha"])
+let pizza2 = pizzaOven("borde de queso" , "salsa BBQ" , ["mozzarella"], ["champiñones", "aceitunas", "cebollas"])
+let pizza3 = pizzaOven("pan" , "ketchup" , ["mozzarella", "parmesano"], ["champiñones", "piña"])
+let pizza4 = pizzaOven("pan" , "salsa BBQ" , ["mozzarella", "chedar"], ["champiñones", "cebollas"])
+
 console.log(pizza1);
 
 console.log(pizza2);
@@ -39,10 +40,11 @@ const pizzaRandom = function() {
             quesos:null,
             salsas:null,
         }
-        let tipoCorteza= ["corteza delgada", "borde de queso", "masa pan"],
-        let tipoSalsa= ["salsa de tomate", "salsa BBQ" "ketchup"],
-        let queso= ["extra queso", "chedar", "parmesano", "mozzarella"],
-        let salsas= [["champiñones, choclo"],["pepperoni", "salchichas"],["tomate","pimineto verde","cebolla"]["piña", "tomate"]]
+
+        let tipoCorteza=["corteza delgada","borde de queso","pan"],
+        tipoSalsa=["salsa tradicional","salsa BBQ","ketchup"],
+        quesos=[["mozzarella"],["mozzarella"],["mozzarella", "parmesano"],["mozzarella", "chedar"]],
+        salsas=[["pepperoni","salchicha"],["champiñones", "aceitunas", "cebollas"],["champiñones", "piña"],["champiñones", "cebollas"]];
 
         let randomTipoCorteza= Math.round(Math.random()*2),
             randomTipoSalsa=Math.round(Math.random()*2),
